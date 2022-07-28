@@ -1,0 +1,12 @@
+CREATE TABLE contacts (
+  id SERIAL PRIMARY KEY,
+  contactphone VARCHAR(255),
+  contactname VARCHAR(255),
+  user_id INT REFERENCES users(id)
+);
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255),
+  password VARCHAR(255)
+);
